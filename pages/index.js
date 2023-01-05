@@ -45,7 +45,7 @@ const HomePage = (props) => {
 export async function getStaticProps() {
   // fetch data from api
   return {
-    props: { meetups: DUMMMY_DATA },
+    props: { meetups: DUMMY_DATA },
     revalidate: 10
   };
 }
