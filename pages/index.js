@@ -1,7 +1,7 @@
 import Layout from "../components/layout/Layout";
 import MeetupList from "../components/meetups/MeetupList";
 
-const DUMMMY_DATA = [
+const DUMMY_DATA = [
   {
     id: "m1",
     title: "vatican museum",
@@ -24,10 +24,24 @@ const DUMMMY_DATA = [
     description: "the beautiful city of kano"
   }
 ];
+
+
 const HomePage = (props) => {
   return <MeetupList meetups={props.meetups} />;
 };
 
+// export async function getServerSideProps(context) {
+//   const req = context.req;
+//   const res = context.res;
+
+//   // fetch data from an API
+
+//   return {
+//     props: {
+//       meetups: DUMMY_DATA
+//     }
+//   };
+// }
 export async function getStaticProps() {
   // fetch data from api
   return {
